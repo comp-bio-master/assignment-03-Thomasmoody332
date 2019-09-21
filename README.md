@@ -7,7 +7,7 @@
 * I recommend troubleshooting after each change you make to the script
 * You may work in groups but each student must submit their own work.
 
-### Requested Updates
+### Structure of Script
 The `admesh2tabdelimited.bash` script is functional, but hard to read and poorly commented.  We can employ variables to improve the readability of the script and reorganize the comments to improve it for future users.
 
 The script can be confusing at first, but it only really does two things.  First, it employs `cat` to join a header with the tidy data and saves that into a file which is stored in the outputFile which is stored in the variable `$TIDYDATAFILE` which is provide as an argument at the command line.
@@ -41,9 +41,33 @@ cat <(header) \
 <(shell surface area)
 ```
 
+### Requested Updates
+Generally, your task is to take each of the arguments passed to cat and paste, save them into variables that are logically named and defind after `TIDYDATAFILE=$2` and before the line beginning with `cat`.  Then use those variables as arguments passed to `cat` and `paste`.  The tricky part is that variables don't store tabs or ends of lines; those will be converted to spaces. You will have to use `tr`, `paste`, and maybe `echo` to convert the variables back into a tab delimited header row and columns within the arguments passed to `cat` and `paste`. Prior to each line your add or modify, add a comment that describes what is happening in the next line of code. Troubleshoot your changes until the script works.
 
-1. Rather than making the header inside the arguments for cat, after the variable called TIDYDATAFILE, make a variable called HEADER and set it equal to the code that specifies the header.  Then inside of the cat
+Step by step:
+1. Rather than making the header inside the first argument for `cat`, after the variable called TIDYDATAFILE, insert a comment (e.g `# create header row and save to variable`).  In the following line, make a variable called HEADER and set it equal to the code that specifies the header.  Then pass the variable `$HEADER` to `cat` as the first argument.  Make sure the script works before going to step 2.  If you get stuck, post to our team on github.  I'll show you this one, the you will do the rest:
+```bash
+#this script will convert output from admesh to a tidy tab delimited table
+INPUTFILE=$1
+TIDYDATAFILE=$2
 
+# create header row and save to variable
+HEADER=$(echo -e FileName'\t'MinX'\t'MaxX'\t'MinY'\t'MaxY'\t'MinZ'\t'MaxZ'\t'FacetsBefore'\t'FacetsAfter'\t'Volume'\t'SurfArea)
+
+cat <(echo $HEADER | tr " " "\t") \
+<(\
+paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile://g') \
+<(grep '^Min X' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]X=//g' | tr "," "\t") \
+<(grep '^Min Y' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Y=//g' | tr "," "\t") \
+<(grep '^Min Z' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Z=//g' | tr "," "\t") \
+<(grep '^Number of facets' $INPUTFILE |  sed 's/Number of facets  *: *//g' | sed 's/  */\t/g') \
+<(grep 'Volume' $INPUTFILE |  sed 's/Number of parts *:.*Volume *: *//g') \
+<(grep 'Surface area' $INPUTFILE |  sed 's/Degenerate facets *:.*Surface area *: *//g')\
+) > $TIDYDATAFILE
+
+```
+
+2.
 
 ### To `push` your changes to your repository on GitHub, and thus submit the assigment, do the following
 
