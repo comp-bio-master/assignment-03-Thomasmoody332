@@ -1,0 +1,360 @@
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_040_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_040_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -18.616932, Max X =  17.922081
+Min Y = -14.720024, Max Y =  15.514564
+Min Z = -9.092596, Max Z =  9.092596
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 :  9889                9889
+Facets with 1 disconnected edge  : 32767               665393678
+Facets with 2 disconnected edges :     7               1424094594
+Facets with 3 disconnected edges :     1               -1424117279
+Total disconnected facets        : 32775               665370993
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    7880.886719
+Degenerate facets     :     0       Surface area    :    1552.007080
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_040_solid_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_040_solid_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -18.723429, Max X =  18.075565
+Min Y = -14.759604, Max Y =  15.558505
+Min Z = -9.092596, Max Z =  9.092596
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 12688               12688
+Facets with 1 disconnected edge  :     0               -16220219
+Facets with 2 disconnected edges : 1306723344                  -1
+Facets with 3 disconnected edges : 32667               12689
+Total disconnected facets        : 1306756011               -16207531
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    8227.850586
+Degenerate facets     :     0       Surface area    :    2491.397705
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_077_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_077_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -18.800415, Max X =  18.309458
+Min Y = -21.093016, Max Y =  21.192537
+Min Z = -11.222236, Max Z =  11.222236
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 14078               14078
+Facets with 1 disconnected edge  :     0               -16220219
+Facets with 2 disconnected edges : -811400176                  -1
+Facets with 3 disconnected edges : 32694               14079
+Total disconnected facets        : -811367482               -16206141
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    12833.443359
+Degenerate facets     :     0       Surface area    :    2186.704590
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_077_solid_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_077_solid_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -18.865547, Max X =  18.309458
+Min Y = -21.147333, Max Y =  21.332951
+Min Z = -11.222237, Max Z =  11.222236
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 17030               17030
+Facets with 1 disconnected edge  :     0               -16220219
+Facets with 2 disconnected edges : -98368496                  -1
+Facets with 3 disconnected edges : 32524               17031
+Total disconnected facets        : -98335972               -16203189
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    13300.674805
+Degenerate facets     :     0       Surface area    :    3507.086426
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_091_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_091_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -20.004677, Max X =  19.838902
+Min Y = -23.078871, Max Y =  23.162359
+Min Z = -9.886813, Max Z =  9.886813
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 14103               14103
+Facets with 1 disconnected edge  : 32767               1067120545
+Facets with 2 disconnected edges : -163754450               1038094022
+Facets with 3 disconnected edges :     0               -1038079920
+Total disconnected facets        : -163721683               1067134647
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    12259.958008
+Degenerate facets     :     0       Surface area    :    2171.372559
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_091_solid_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_091_solid_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -20.160204, Max X =  19.916719
+Min Y = -23.193792, Max Y =  23.271250
+Min Z = -9.886813, Max Z =  9.886813
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 17060               17060
+Facets with 1 disconnected edge  : 32767               846542241
+Facets with 2 disconnected edges : -163754450               1038094022
+Facets with 3 disconnected edges :     0               -1038076963
+Total disconnected facets        : -163721683               846559300
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    12786.838867
+Degenerate facets     :     0       Surface area    :    3692.496826
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_092_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_092_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -24.366394, Max X =  24.445721
+Min Y = -20.321655, Max Y =  20.657444
+Min Z = -9.736081, Max Z =  9.736081
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 15667               15667
+Facets with 1 disconnected edge  : 32767               783599457
+Facets with 2 disconnected edges : -163754450               1038094022
+Facets with 3 disconnected edges :     0               -1038078356
+Total disconnected facets        : -163721683               783615123
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    14469.989258
+Degenerate facets     :     0       Surface area    :    2437.895996
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_092_solid_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_092_solid_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -24.514170, Max X =  24.604183
+Min Y = -20.405821, Max Y =  20.906765
+Min Z = -9.736081, Max Z =  9.736081
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 18302               18302
+Facets with 1 disconnected edge  : 32767               835062369
+Facets with 2 disconnected edges : -163754450               1038094022
+Facets with 3 disconnected edges :     0               -1038075721
+Total disconnected facets        : -163721683               835080670
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    15222.480469
+Degenerate facets     :     0       Surface area    :    4133.492676
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_106_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_106_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -16.091328, Max X =  15.821665
+Min Y = -13.994637, Max Y =  13.585399
+Min Z = -5.154219, Max Z =  5.154219
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 :  5848                5848
+Facets with 1 disconnected edge  : 32767               393205793
+Facets with 2 disconnected edges : -163754450               1038094022
+Facets with 3 disconnected edges :     0               -1038088175
+Total disconnected facets        : -163721683               393211640
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    3326.990479
+Degenerate facets     :     0       Surface area    :    922.986389
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_106_solid_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_106_solid_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -16.419874, Max X =  15.976293
+Min Y = -14.181430, Max Y =  13.720495
+Min Z = -5.154219, Max Z =  5.154219
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 :  8518                8518
+Facets with 1 disconnected edge  : 32767               482653466
+Facets with 2 disconnected edges :     7               2030171510
+Facets with 3 disconnected edges :     1               -2030195578
+Total disconnected facets        : 32775               482629398
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    3581.260010
+Degenerate facets     :     0       Surface area    :    1684.362061
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_110_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_110_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -15.163181, Max X =  15.990222
+Min Y = -19.392235, Max Y =  17.648146
+Min Z = -7.976577, Max Z =  7.976577
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 :  8964                8964
+Facets with 1 disconnected edge  :     0               -16220219
+Facets with 2 disconnected edges : -1289550832                  -1
+Facets with 3 disconnected edges : 32583                8965
+Total disconnected facets        : -1289518249               -16211255
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    6218.381348
+Degenerate facets     :     0       Surface area    :    1375.221558
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
+ADMesh version 0.99.0dev, Copyright (C) 1995, 1996 Anthony D. Martin
+ADMesh comes with NO WARRANTY.  This is free software, and you are welcome to
+redistribute it under certain conditions.  See the file COPYING for details.
+Opening Cex_Maui_Muolea_100N_2017_110_solid_rotated.stl
+Calculating volume...
+Calculate surfacea area...
+
+================= Results produced by ADMesh version 0.99.0dev ================
+Input file         : Cex_Maui_Muolea_100N_2017_110_solid_rotated.stl
+File type          : Binary STL file
+Header             : Exported from Blender-2.79 (sub 0)
+============== Size ==============
+Min X = -15.336053, Max X =  16.175011
+Min Y = -19.570724, Max Y =  17.911411
+Min Z = -7.976578, Max Z =  7.976577
+========= Facet Status ========== Original ============ Final ====
+Number of facets                 : 11800               11800
+Facets with 1 disconnected edge  : 32767               402293861
+Facets with 2 disconnected edges :     7               815920555
+Facets with 3 disconnected edges :     1               -815941288
+Total disconnected facets        : 32775               402273128
+=== Processing Statistics ===       ====== Other Statistics ======
+Number of parts       :     0       Volume          :    6538.803711
+Degenerate facets     :     0       Surface area    :    2352.201172
+Edges fixed           :     0
+Facets removed        :     0
+Facets added          :     0
+Facets reversed       :     0
+Backwards edges       :     0
+Normals fixed         :     0
