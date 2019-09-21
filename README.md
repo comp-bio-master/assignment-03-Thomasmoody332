@@ -80,6 +80,8 @@ cat <(echo $HEADER | tr " " "\t") \
 
 5. Clean up the old commenting that precedes the variables being set by removing unneccessary or duplicated comments.
 
+6. Modify the script to add at least one more column of data (extracted from the admesh.out file) to the final tidy data file.
+
 ### To `push` your changes to your repository on GitHub, and thus submit the assigment, do the following
 
 * change directories to the directory for this assignment
