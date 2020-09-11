@@ -61,7 +61,7 @@ tidy data
 ```
 Expanding the tidy data in the previous code block:
 
-```bash
+```
 # this is pseudo code that describes the main portion of the script
 cat <(header) \
 <(\
