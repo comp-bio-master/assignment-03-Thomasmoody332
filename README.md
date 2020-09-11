@@ -87,13 +87,13 @@ And here is the full bash code block for comparison to the pseudo code blocks ab
 ```bash
 cat <(echo -e FileName'\t'MinX'\t'MaxX'\t'MinY'\t'MaxY'\t'MinZ'\t'MaxZ'\t'FacetsBefore'\t'FacetsAfter'\t'Volume'\t'SurfArea) \
 <(\
-paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile://g') \
-<(grep '^Min X' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]X=//g' | tr "," "\t") \
-<(grep '^Min Y' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Y=//g' | tr "," "\t") \
-<(grep '^Min Z' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Z=//g' | tr "," "\t") \
-<(grep '^Number of facets' $INPUTFILE |  sed 's/Number of facets  *: *//g' | sed 's/  */\t/g') \
-<(grep 'Volume' $INPUTFILE |  sed 's/Number of parts *:.*Volume *: *//g') \
-<(grep 'Surface area' $INPUTFILE |  sed 's/Degenerate facets *:.*Surface area *: *//g')\
+  paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile://g') \
+    <(grep '^Min X' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]X=//g' | tr "," "\t") \
+    <(grep '^Min Y' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Y=//g' | tr "," "\t") \
+    <(grep '^Min Z' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Z=//g' | tr "," "\t") \
+    <(grep '^Number of facets' $INPUTFILE |  sed 's/Number of facets  *: *//g' | sed 's/  */\t/g') \
+    <(grep 'Volume' $INPUTFILE |  sed 's/Number of parts *:.*Volume *: *//g') \
+    <(grep 'Surface area' $INPUTFILE |  sed 's/Degenerate facets *:.*Surface area *: *//g')\
 ) > $TIDYDATAFILE
 
 #this is not easily readable on 1 line
