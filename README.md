@@ -1,28 +1,49 @@
 # assignment03_LimpetShellEvolution
 
-## Description of Assignment (Due 09/27/2019)
+![alt text](https://github.com/tamucc-comp-bio-2020/classroom_repo/blob/master/lectures/Week03_files/3Dscan_limpetShell.PNG)
+
+## Description of Assignment (Due 09/18)
+
 * Clone the repository for this assignment to your home dir in your terminal. 
+
 * Ensure that the `admesh2tabdelimited.bash` script works by running it on the admesh.out data. This script converts the output of `admesh`, a unix command to extract information from 3D scans stored in `stl` files, into a "tidy" data file.
-* Complete the requested updates to the `admesh2tabdelimited.bash` 
-* I recommend troubleshooting after each change you make to the script
+
+```
+#this script takes output from admesh and makes a tidy table of the data
+
+#to run:
+#bash admesh2tabdelimited.bash <admesh output file> <tab-delimited file>
+
+bash admesh2tabdelimited.bash admesh.out admesh.dat
+```
+
+* Complete the requested updates to the `admesh2tabdelimited.bash` (see below)
+
+* I recommend testing function and troubleshooting as necessary after each change you make to the script
+
 * You may work in groups but each student must submit their own work.
 
 ### Structure of Script
 The `admesh2tabdelimited.bash` script is functional, but hard to read and poorly commented.  We can employ variables to improve the readability of the script and reorganize the comments to improve it for future users.
 
-The script can be confusing at first, but it only really does two things.  First, it employs `cat` to join a header with the tidy data and saves that into a file which is stored in the outputFile which is stored in the variable `$TIDYDATAFILE` which is provide as an argument at the command line.
+The script can be confusing at first, but it only really does two things.  
+
+1. It employs `cat` to join a header with the tidy data and saves that into a file which is stored in the outputFile which is stored in the variable `$TIDYDATAFILE` which is provide as an argument at the command line.
+
 ```bash
-#this is pseudo code
+#this is pseudo code, the (), <, and > are required and do something
 cat <(header) <(tidy data) > outputFile
 ```
 
-Second, it extracts data from the `admesh.out` file in columns and joins the columns using `paste` to make the tidy data
+2. It extracts data from the `admesh.out` file in columns and joins the columns using `paste` to make the tidy data
+
 ```bash
-#this is pseudo code
+#this is pseudo code, the (), <, and > are required and do something
 paste <(3D stl file names) <(Min and Max X) <(Min and Max Y) <(Min and Max Z) <(Number of Facets) <(shell volume) <(shell surface area)
 ```
 
 To be efficient, the intermediary steps are not saved into files and so, the business end of this script is one long pipeline and the escape character `\ ` is used to make it more readable by separating each component by line.
+
 ```bash
 # this is pseudo code
 cat <(header) \
@@ -30,11 +51,12 @@ cat <(header) \
 tidy data
 \) > output file
 ```
-Expanding the tidy data:
+Expanding the tidy data in the previous code block:
+
 ```bash
-# this is pseudo code
+# this is pseudo code that describes the main portion of the script
 cat <(header) \
-<( \
+<(\
   <paste <(3D stl file names) \
     <(Min and Max X) \
     <(Min and Max Y) \
@@ -44,6 +66,22 @@ cat <(header) \
     <(shell surface area) \
 ) > output file
 ```
+
+And here is the full bash code block for comparison to the pseudo code blocks above
+
+```bash
+cat <(echo -e FileName'\t'MinX'\t'MaxX'\t'MinY'\t'MaxY'\t'MinZ'\t'MaxZ'\t'FacetsBefore'\t'FacetsAfter'\t'Volume'\t'SurfArea) \
+<(\
+paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile://g') \
+<(grep '^Min X' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]X=//g' | tr "," "\t") \
+<(grep '^Min Y' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Y=//g' | tr "," "\t") \
+<(grep '^Min Z' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Z=//g' | tr "," "\t") \
+<(grep '^Number of facets' $INPUTFILE |  sed 's/Number of facets  *: *//g' | sed 's/  */\t/g') \
+<(grep 'Volume' $INPUTFILE |  sed 's/Number of parts *:.*Volume *: *//g') \
+<(grep 'Surface area' $INPUTFILE |  sed 's/Degenerate facets *:.*Surface area *: *//g')\
+) > $TIDYDATAFILE
+```
+
 
 ### Requested Updates
 Generally, your task is to take each of the arguments passed to cat and paste, save them into variables that are logically named and defind after `TIDYDATAFILE=$2` and before the line beginning with `cat`.  Then use those variables as arguments passed to `cat` and `paste`.  The tricky part is that variables don't store tabs or ends of lines; those will be converted to spaces. You will have to use `echo`, `tr`, and sometimes `paste`, in that order, to convert the variables back into a tab delimited header row and columns within the arguments passed to `cat` and `paste`. Prior to each line your add or modify, add a comment that describes what is happening in the next line of code. Troubleshoot your changes until the script works.
