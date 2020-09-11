@@ -58,6 +58,10 @@ cat <(header) \
 <( \
 tidy data
 \) > output file
+
+
+# this is same pseudo code on 1 line
+cat <(header) <(tidy data) > output file
 ```
 Expanding the tidy data in the previous code block:
 
@@ -65,7 +69,7 @@ Expanding the tidy data in the previous code block:
 # this is pseudo code that describes the main portion of the script
 cat <(header) \
 <(\
-  <paste <(3D stl file names) \
+  paste <(3D stl file names) \
     <(Min and Max X) \
     <(Min and Max Y) \
     <(Min and Max Z) \
@@ -73,6 +77,9 @@ cat <(header) \
     <(shell volume) \
     <(shell surface area) \
 ) > output file
+
+# this is same pseudo code on 1 line
+cat <(header) <(paste <(3D stl file names) <(Min and Max X) <(Min and Max Y) <(Min and Max Z) <(Number of Facets) <(shell volume) <(shell surface area)) > output file
 ```
 
 And here is the full bash code block for comparison to the pseudo code blocks above
@@ -88,6 +95,8 @@ paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile:
 <(grep 'Volume' $INPUTFILE |  sed 's/Number of parts *:.*Volume *: *//g') \
 <(grep 'Surface area' $INPUTFILE |  sed 's/Degenerate facets *:.*Surface area *: *//g')\
 ) > $TIDYDATAFILE
+
+#this is not easily readable on 1 line
 ```
 
 
