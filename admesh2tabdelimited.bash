@@ -25,15 +25,32 @@
 #this script will convert output from admesh to a tidy tab delimited table
 INPUTFILE=$1
 TIDYDATAFILE=$2
-cat <(echo -e FileName'\t'MinX'\t'MaxX'\t'MinY'\t'MaxY'\t'MinZ'\t'MaxZ'\t'FacetsBefore'\t'FacetsAfter'\t'Volume'\t'SurfArea) \
+# create header row and save to variable
+ HEADER=$(echo -e FileName'\t'MinX'\t'MaxX'\t'MinY'\t'MaxY'\t'MinZ'\t'MaxZ'\t'FacetsBefore'\t'FacetsAfter'\t'Volume'\t'SurfArea)
+# pass the first column of data to the first arugment in paste and create a variable
+ FileNames=$(paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile://g'))
+# filtering and transforming the text from column 2, min and max x
+ MinMaxX=$(grep '^Min X' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]X=//g' | tr "," "\t")
+# filtering and transforming the text from column 3, min and max y
+ MinMaxY=$(grep '^Min Y' $INPUTFILE | sed 's/ //g' | sed 's/M[ai][nx]Y=//g' | tr "," "\t")
+#filtering and transforming the text from column 4, min and max z
+ MinMaxZ=$(grep '^Min Z' $INPUTFILE | sed 's/ //g' | sed 's/M[ai][nx]Z=//g' | tr "," "\t")
+#filtering and transforming the text from column 5, number of facets
+ FACETS=$(grep '^Number of facets' $INPUTFILE | sed 's/Number of facets  *: *//g' | sed 's/  */\t/g')
+#filtering and transforming the text from column 6, volume
+ VOLUME=$(grep 'Volume' $INPUTFILE | sed 's/Number of parts *:.*Volume *: *//g')
+#filtering and transforming the text from column 7, surface area
+ SURFACEAREA=$(grep 'Surface area' $INPUTFILE | sed 's/Degenerate facets *:.*Surface area *: *//g')
+
+cat <(echo $HEADER | tr " " "\t") \
 <(\
-paste -d '\t' <(grep '^Input file' $INPUTFILE | sed 's/ //g' | sed 's/Inputfile://g') \
-<(grep '^Min X' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]X=//g' | tr "," "\t") \
-<(grep '^Min Y' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Y=//g' | tr "," "\t") \
-<(grep '^Min Z' $INPUTFILE |  sed 's/ //g' | sed 's/M[ai][nx]Z=//g' | tr "," "\t") \
-<(grep '^Number of facets' $INPUTFILE |  sed 's/Number of facets  *: *//g' | sed 's/  */\t/g') \
-<(grep 'Volume' $INPUTFILE |  sed 's/Number of parts *:.*Volume *: *//g') \
-<(grep 'Surface area' $INPUTFILE |  sed 's/Degenerate facets *:.*Surface area *: *//g')\
+echo $FileNames \
+    <(echo $MinMaxX | tr " " "\t") \
+    <(echo $MinMaxY | tr " " "\t") \
+    <(echo $MinMaxZ | tr " " "\t") \
+    <(echo $FACETS | tr " " "\t") \
+    <(echo $VOLUME | tr " " "\t") \
+    <(echo $SURFACEAREA | tr " " "\t") \
 ) > $TIDYDATAFILE
 
 
